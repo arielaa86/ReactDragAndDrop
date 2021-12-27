@@ -1,0 +1,31 @@
+.dropArea {
+  display: flex;
+  height: 40%;
+  background-color: lightgray;
+  border: solid 1px gray;
+
+}
+
+.folder{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: solid 1px black;
+  border-radius: 4px;
+  width: 150px;
+  height: 60px;
+  margin: 4px;
+}
+
+.folderBottom{
+  display: flex;
+  background-color: darkgray;
+  color: white;
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  justify-content: center;
+  align-items: center;
+}
