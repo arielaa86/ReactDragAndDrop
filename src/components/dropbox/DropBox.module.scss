@@ -1,25 +1,34 @@
-.dropArea {
+.container, .dropArea, .folder, .folderBottom {
   display: flex;
-  height: 40%;
-  background-color: lightgray;
-  border: solid 1px gray;
-
 }
 
-.folder{
-  display: flex;
+.container {
+  flex-direction: row;
+}
+
+.dropArea {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 60vw;
+  height: 100vh;
+  border: solid 1px gray;
+  background-color: #414141;
+  padding: 20px;
+}
+
+.folder {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  border: solid 1px black;
+  background-color: white;
+  border: solid 1px white;
   border-radius: 4px;
   width: 150px;
   height: 60px;
-  margin: 4px;
+  margin: 10px;
 }
 
-.folderBottom{
-  display: flex;
+.folderBottom {
   background-color: darkgray;
   color: white;
   width: 100%;
@@ -28,4 +37,33 @@
   border-bottom-right-radius: 4px;
   justify-content: center;
   align-items: center;
+}
+
+.folderDetails {
+  width: 40vw;
+  height: 100%;
+}
+
+@mixin fileDetails {
+  font-size: 14px;
+  padding: 4px;
+  opacity: 0.8;
+}
+
+.odd {
+  background-color: white;
+  @include fileDetails;
+}
+
+.even {
+  background-color: #eaeaea;
+  @include fileDetails;
+}
+
+.odd:hover, .even:hover{
+  background-color: #c7c4c4;
+}
+
+.odd, .even {
+  border: none;
 }
